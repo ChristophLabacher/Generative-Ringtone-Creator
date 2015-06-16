@@ -224,7 +224,7 @@ function playSounds(bufferList) {
 	setTimeout(function() {
 		rec.stop();
 		$(".download").removeClass("inactive");
-	}, 2000)
+	}, 4000)
 
 	
 	for (var i = 0; i < sounds.length; i++)	{
