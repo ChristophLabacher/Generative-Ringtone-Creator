@@ -15,23 +15,27 @@ $(document).ready(function()	{
 		$(".download").addClass("inactive");
 	});
 	
-	delay = context.createDelay(1.0);
-	delay.connect(context.destination);
-	rec = new Recorder(delay);
+	gain = context.createGain();
+	gain.gain.value = 1;
+	gain.connect(context.destination);
+	rec = new Recorder(gain);
 	
 	$(".buttons").on("click", ".download:not(.inactive)", function()	{
 		download();
+	});
+	
+	$(".buttons").on("click", ".play:not(.inactive)", function()	{
+		play();
 	});
 	
 	$(".info").click(function()	{
 		$(this).text("");
 		$(".description").css("height", "100px");
 	});
+	
 });
 
 function shouldPlay(e)	{
-	$(".download").addClass("inactive");
-	
 	if (e.keyCode == 13) {
 		play();
 		return false;
@@ -213,7 +217,7 @@ function playSounds(bufferList) {
 	for (var i = 0; i < bufferList.length; i++ )	{
 		var sound = context.createBufferSource();
 		sound.buffer = bufferList[i];
-		sound.connect(delay);
+		sound.connect(gain);
 		
 		sounds.push(sound);
 	}
@@ -221,17 +225,28 @@ function playSounds(bufferList) {
 	rec.clear();
 	$(".download").addClass("inactive");
 	rec.record();
+	
 	setTimeout(function() {
 		rec.stop();
 		$(".download").removeClass("inactive");
-	}, 4000)
+		clearInterval(fadeOut);
+	}, 2000)
 
+	gain.gain.value = 1;
 	
 	for (var i = 0; i < sounds.length; i++)	{
 		setTimeout(function(sound)	{
 			sound.start();
 		}, (i*40), sounds[i])
 	}
+	
+	if (typeof fadeOut !== 'undefined')	{
+		clearInterval(fadeOut);
+	}
+	
+	fadeOut = setInterval(function() {
+		gain.gain.value *= .7;
+	},  100);
 }
 
 function download()	{

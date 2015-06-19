@@ -61,10 +61,10 @@ form	{
 		color: white;
 		border: none;
 		font-size: inherit;
-		transition: background-color .5s, opacity .5s;
+		transition: background-color .5s, opacity 1s;
 		-webkit-appearance: none;
 		
-		&:hover	{
+		&:hover:not(.inactive)	{
 			cursor: pointer;
 			background-color: darken($red, 3);
 		}

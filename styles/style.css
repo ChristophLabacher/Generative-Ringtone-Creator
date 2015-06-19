@@ -186,12 +186,12 @@ form .button {
   color: white;
   border: none;
   font-size: inherit;
-  -webkit-transition: background-color 0.5s, opacity 0.5s;
-          transition: background-color 0.5s, opacity 0.5s;
+  -webkit-transition: background-color 0.5s, opacity 1s;
+          transition: background-color 0.5s, opacity 1s;
   -webkit-appearance: none;
 }
 
-form .button:hover {
+form .button:hover:not(.inactive) {
   cursor: pointer;
   background-color: #c85b5b;
 }
