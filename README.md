@@ -1,4 +1,4 @@
-# Personal Ringtone Generator
+# Generative Ringtone Creator
 
 ![](screenshot.png)
 

@@ -128,7 +128,7 @@ function generateSoundFromPhoneNumber(phoneNumber, soundFont)	{
 		text += ", where the third tone is transposed down";
 	}
 	
-	text += ".";
+	text += ". ";
 	
 	if (firstPause)	{
 		text += "There is a small pause beween the first and the second tone"
