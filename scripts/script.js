@@ -92,6 +92,8 @@ function generateSoundFromPhoneNumber(phoneNumber, soundFont)	{
 	var secondTone = conversion[indentifier.charAt(2)].secondTone;
 	var thirdTone = conversion[indentifier.charAt(3)].thirdTone;
 	var seven = conversion[indentifier.charAt(4)].seven;
+	var firstPause = conversion[indentifier.charAt(2)].firstPause;
+	var secondPause = conversion[indentifier.charAt(3)].secondPause;
 		
 	var chord = conversion[indentifier.charAt(0)].scale + conversion[indentifier.charAt(1)].key;
 	var text = "<div class=\"chord-info\">";
@@ -124,7 +126,20 @@ function generateSoundFromPhoneNumber(phoneNumber, soundFont)	{
 		text += ", where the third tone is transposed down";
 	}
 	
-	text += ".</div>";
+	text += ".";
+	
+	if (firstPause)	{
+		text += "There is a small pause beween the first and the second tone"
+	} else if (secondPause)	{
+		text += "There is a small pause beween the second and the third tone."
+	}
+	
+	if (firstPause && secondPause)	{
+		text += " and a small pause beween the second and the third tone."
+	} else if (firstPause)	{
+		text += ".</div>";		
+	}
+	
 	
 	$(".chord-description-container").empty().prepend(text);
 	
@@ -196,6 +211,27 @@ function generateSoundFromPhoneNumber(phoneNumber, soundFont)	{
 		chord.push(seven);
 	}
 	
+	var firstTime = 0;
+	var secondTime = 0;
+	var thirdTime = 0;
+	var forthTime = 0;
+	
+	if (firstPause)	{
+		secondTime = firstTime + 200;
+	} else	{
+		secondTime = firstTime + 50;
+	}
+	
+	if (secondPause)	{
+		thirdTime = secondTime + 200;
+	} else	{
+		thirdTime = secondTime + 50;
+	}
+	
+	forthTime = thirdTime + 50;
+	
+	times = [firstTime, secondTime, thirdTime, forthTime];
+	
 	var files = [];
 	for (var i = 0; i < chord.length; i++)	{
 		file = '../data/' + soundFonts[soundFont].title + '.stereo/' + soundFonts[soundFont].title + '.' + chord[i] + '.stereo.wav';
@@ -237,7 +273,7 @@ function playSounds(bufferList) {
 	for (var i = 0; i < sounds.length; i++)	{
 		setTimeout(function(sound)	{
 			sound.start();
-		}, (i*40), sounds[i])
+		}, times[i], sounds[i])
 	}
 	
 	if (typeof fadeOut !== 'undefined')	{

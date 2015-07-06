@@ -39,70 +39,90 @@ var conversion = [
 		"key" : "maj",
 		"seven" : true,
 		"secondTone" : "-",
-		"thirdTone" : "+"
+		"thirdTone" : "+",
+		"firstPause": false,
+		"secondPause": true
 	},{
 		"number" : 1,
 		"scale" : "D",
 		"key" : "min",
 		"seven" : true,
 		"secondTone" : "0",
-		"thirdTone" : "0"
+		"thirdTone" : "0",
+		"firstPause": true,
+		"secondPause": false
 	},{
 		"number" : 2,
 		"scale" : "Eb",
 		"key" : "maj",
 		"seven" : false,
 		"secondTone" : "+",
-		"thirdTone" : "-"
+		"thirdTone" : "-",
+		"firstPause": "0",
+		"secondPause": true
 	},{
 		"number" : 3,
 		"scale" : "E",
 		"key" : "min",
 		"seven" : false,
 		"secondTone" : "-",
-		"thirdTone" : "+"
+		"thirdTone" : "+",
+		"firstPause": true,
+		"secondPause": false
 	},{
 		"number" : 4,
 		"scale" : "F",
 		"key" : "maj",
 		"seven" : true,
 		"secondTone" : "0",
-		"thirdTone" : "0"
+		"thirdTone" : "0",
+		"firstPause": false,
+		"secondPause": true
 	},{
 		"number" : 5,
 		"scale" : "G",
 		"key" : "min",
 		"seven" : true,
 		"secondTone" : "+",
-		"thirdTone" : "-"
+		"thirdTone" : "-",
+		"firstPause": true,
+		"secondPause": false
 	},{
 		"number" : 6,
 		"scale" : "Ab",
 		"key" : "maj",
 		"seven" : false,
 		"secondTone" : "-",
-		"thirdTone" : "+"
+		"thirdTone" : "+",
+		"firstPause": false,
+		"secondPause": true
 	},{
 		"number" : 7,
 		"scale" : "A",
 		"key" : "min",
 		"seven" : false,
 		"secondTone" : "0",
-		"thirdTone" : "0"
+		"thirdTone" : "0",
+		"firstPause": true,
+		"secondPause": false
 	},{
 		"number" : 8,
 		"scale" : "Bb",
 		"key" : "maj",
 		"seven" : true,
 		"secondTone" : "+",
-		"thirdTone" : "-"
+		"thirdTone" : "-",
+		"firstPause": "0",
+		"secondPause": true
 	},{
 		"number" : 9,
 		"scale" : "B",
 		"key" : "min",
 		"seven" : true,
 		"secondTone" : "-",
-		"thirdTone" : "+"
+		"thirdTone" : "+",
+		"firstPause": true,
+		"secondPause": false
 	}
 ]
 

@@ -125,14 +125,16 @@ h1 {
   font-weight: 200;
   font-size: 3rem;
   line-height: 3.3rem;
-  color: #cc6666;
+  color: #FFFFFF;
   text-align: center;
-  margin: 2rem 0 4rem 0;
+  margin: 100px auto 4rem auto;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  text-align: center;
+  width: 320px;
 }
 
 form {
@@ -214,9 +216,10 @@ form .warning {
 
 main {
   width: 320px;
-  margin: 100px auto 50px auto;
+  margin: 0px auto 50px auto;
   background-color: white;
   padding: 1.5rem;
+  padding-top: 3.5rem;
   border-radius: 1rem;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }

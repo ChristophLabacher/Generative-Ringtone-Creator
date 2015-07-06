@@ -17,18 +17,18 @@ Then again, who has 10000 contacts?
 
 The phone number is flipped around, then every second digit is taken into consideration. Each one alters the chord according to the following table:
 
-|  | Scale | Key | Seven | Second Tone | Third Tone |
-| ------ | ------ | ------ | ------ | ------ | ------ |
-| 0 | C | man | yes | Down | Up |
-| 1 | D | min | yes | - | - |
-| 2 | Eb | maj | no | Up | Down |
-| 3 | E | min | no | Down | Up |
-| 4 | F | maj | yes | - | - |
-| 5 | G | min | yes | Up | Down |
-| 6 | Ab | maj | no | Down | Up |
-| 7 | A | min | no | - | - |
-| 8 | Bb | maj | yes | Up | Down |
-| 9 | B | min | yes | Down | Up |
+|  | Scale | Key | Seven | Second Tone | Third Tone | First Pause | Second Pause |
+| ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| 0 | C | man | yes | Down | Up | 0 | 1 |
+| 1 | D | min | yes | - | - | 1 | 0 |
+| 2 | Eb | maj | no | Up | Down | 0 | 1 |
+| 3 | E | min | no | Down | Up | 1 | 0 |
+| 4 | F | maj | yes | - | - | 0 | 1 |
+| 5 | G | min | yes | Up | Down | 1 | 0 |
+| 6 | Ab | maj | no | Down | Up | 0 | 1 |
+| 7 | A | min | no | - | - | 1 | 0 |
+| 8 | Bb | maj | yes | Up | Down | 0 | 1 |
+| 9 | B | min | yes | Down | Up | 1 | 0 |
 
 ## Will the same phone number always produce the same result?
 Yes. There is no randomness involved – that’s kind of the point.
