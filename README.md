@@ -9,9 +9,9 @@ Different digits of the phone number are used to create a chord, which can be pl
 The sounds were created by the [University of Iowa Electronic Music Studios](http://theremin.music.uiowa.edu/index.html).
 
 ## How many combinations are there?
-Five digits of the phone number are used to create the chord. There are however significantly less than 99999 possible combinations: Every digit except for the first one is altering between two or three states instead of nine. Because of this there are 360 different chords.
+Seven digits of the phone number are used to create the chord. There are however significantly less than 9,999,999 possible combinations: Every digit except for the first one is altering between two or three states instead of nine. Because of this there are 1440 different chords.
 
-Then again, who has 10000 contacts?
+Then again, who has 9,999,999 contacts?
 
 ## Which properties of the chords are altered?
 

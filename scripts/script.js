@@ -80,20 +80,22 @@ function createRandomPhoneNumber()	{
 }
 function generateSoundFromPhoneNumber(phoneNumber, soundFont)	{	
 	var reversePhoneNumber = phoneNumber.split("").reverse().join("");
-	var indentifier = "";
+	var indentifier = reversePhoneNumber;
 	
+/*
 	for (var i = 0; i < reversePhoneNumber.length && i < 10; i += 2)	{
 		indentifier += reversePhoneNumber.charAt(i);
 	}
+*/
 	
 	// Convert indentifier to chord
 	var scale = conversion[indentifier.charAt(0)].scale;
-	var key = conversion[indentifier.charAt(1)].key;
-	var secondTone = conversion[indentifier.charAt(2)].secondTone;
-	var thirdTone = conversion[indentifier.charAt(3)].thirdTone;
-	var seven = conversion[indentifier.charAt(4)].seven;
-	var firstPause = conversion[indentifier.charAt(2)].firstPause;
-	var secondPause = conversion[indentifier.charAt(3)].secondPause;
+	var key = conversion[indentifier.charAt(2)].key;
+	var secondTone = conversion[indentifier.charAt(4)].secondTone;
+	var thirdTone = conversion[indentifier.charAt(6)].thirdTone;
+	var seven = conversion[indentifier.charAt(8)].seven;
+	var firstPause = conversion[indentifier.charAt(1)].firstPause;
+	var secondPause = conversion[indentifier.charAt(5)].secondPause;
 		
 	var chord = conversion[indentifier.charAt(0)].scale + conversion[indentifier.charAt(1)].key;
 	var text = "<div class=\"chord-info\">";
