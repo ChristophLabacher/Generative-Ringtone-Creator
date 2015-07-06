@@ -1,6 +1,6 @@
 # Generative Ringtone Creator
 
-![](screenshot.png)
+![](screenshot1.png)
 
 This is an experiment in **generative audio design** created by [Christoph Labacher](http://www.christophlabacher.com). It’s micro-project coded in a day.
 
@@ -9,7 +9,7 @@ Different digits of the phone number are used to create a chord, which can be pl
 The sounds were created by the [University of Iowa Electronic Music Studios](http://theremin.music.uiowa.edu/index.html).
 
 ## How many combinations are there?
-Seven digits of the phone number are used to create the chord. There are however significantly less than 9,999,999 possible combinations: Every digit except for the first one is altering between two or three states instead of nine. Because of this there are 1440 different chords.
+Seven digits of the phone number are used to create the chord. There are however significantly less than 9,999,999 possible combinations: Every digit except for the first one is altering between two or three states instead of nine. Because of this there are 1440 different results.
 
 Then again, who has 9,999,999 contacts?
 
@@ -19,16 +19,16 @@ The phone number is flipped around, then every second digit is taken into consid
 
 |  | Scale | Key | Seven | Second Tone | Third Tone | First Pause | Second Pause |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
-| 0 | C | man | yes | Down | Up | 0 | 1 |
-| 1 | D | min | yes | - | - | 1 | 0 |
-| 2 | Eb | maj | no | Up | Down | 0 | 1 |
-| 3 | E | min | no | Down | Up | 1 | 0 |
-| 4 | F | maj | yes | - | - | 0 | 1 |
-| 5 | G | min | yes | Up | Down | 1 | 0 |
-| 6 | Ab | maj | no | Down | Up | 0 | 1 |
-| 7 | A | min | no | - | - | 1 | 0 |
-| 8 | Bb | maj | yes | Up | Down | 0 | 1 |
-| 9 | B | min | yes | Down | Up | 1 | 0 |
+| 0 | C | man | yes | Down | Up | no | yes |
+| 1 | D | min | yes | - | - | yes | no |
+| 2 | Eb | maj | no | Up | Down | no | yes |
+| 3 | E | min | no | Down | Up | yes | no |
+| 4 | F | maj | yes | - | - | no | yes |
+| 5 | G | min | yes | Up | Down | yes | no |
+| 6 | Ab | maj | no | Down | Up | no | yes |
+| 7 | A | min | no | - | - | yes | no |
+| 8 | Bb | maj | yes | Up | Down | no | yes |
+| 9 | B | min | yes | Down | Up | yes | no |
 
 ## Will the same phone number always produce the same result?
 Yes. There is no randomness involved – that’s kind of the point.
