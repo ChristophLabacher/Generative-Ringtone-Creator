@@ -122,12 +122,12 @@ body {
 }
 
 h1 {
-  font-weight: 200;
+  font-weight: 500;
   font-size: 3rem;
   line-height: 3.3rem;
   color: #FFFFFF;
   text-align: center;
-  margin: 100px auto 4rem auto;
+  margin: 300px auto 4rem auto;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -135,6 +135,24 @@ h1 {
           user-select: none;
   text-align: center;
   width: 320px;
+}
+
+p {
+  font-weight: 200;
+  font-size: 2rem;
+  line-height: 1.4em;
+  color: #e6b3b3;
+  text-align: left;
+  margin: 4rem auto 4rem auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 320px;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 form {
@@ -183,7 +201,7 @@ form .button {
   background-color: #d98c8c;
   outline: none;
   border-radius: 3px;
-  width: 49%;
+  width: 100%;
   float: left;
   color: white;
   border: none;

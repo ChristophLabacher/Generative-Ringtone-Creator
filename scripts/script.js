@@ -236,7 +236,7 @@ function generateSoundFromPhoneNumber(phoneNumber, soundFont)	{
 	
 	var files = [];
 	for (var i = 0; i < chord.length; i++)	{
-		file = '../data/' + soundFonts[soundFont].title + '.stereo/' + soundFonts[soundFont].title + '.' + chord[i] + '.stereo.wav';
+		file = 'data/' + soundFonts[soundFont].title + '.stereo/' + soundFonts[soundFont].title + '.' + chord[i] + '.stereo.wav';
 		files.push(file);
 	}
 	
