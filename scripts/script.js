@@ -1,5 +1,6 @@
+var sounds = [];
+
 $(document).ready(function()	{	
-	
 	try {
 		window.AudioContext = window.AudioContext || window.webkitAudioContext;
 		context = new AudioContext();
@@ -43,6 +44,12 @@ function shouldPlay(e)	{
 }
 
 function play()	{
+	if (sounds)	{
+		for (var i = 0; i < sounds.length; i++)	{
+			sounds[i].stop();
+		}
+	}
+	
 	var number = $("main form #phonenumber").val();
 	var soundfont = $("main form select option:selected").attr("sondFont");
 		
@@ -236,7 +243,7 @@ function generateSoundFromPhoneNumber(phoneNumber, soundFont)	{
 	
 	var files = [];
 	for (var i = 0; i < chord.length; i++)	{
-		file = '../data/' + soundFonts[soundFont].title + '.stereo/' + soundFonts[soundFont].title + '.' + chord[i] + '.stereo.wav';
+		file = 'data/' + soundFonts[soundFont].title + '.stereo/' + soundFonts[soundFont].title + '.' + chord[i] + '.stereo.wav';
 		files.push(file);
 	}
 	
@@ -250,7 +257,7 @@ function generateSoundFromPhoneNumber(phoneNumber, soundFont)	{
 
 function playSounds(bufferList) {
 	
-	var sounds = [];
+	sounds = [];
 	
 	for (var i = 0; i < bufferList.length; i++ )	{
 		var sound = context.createBufferSource();
@@ -284,7 +291,7 @@ function playSounds(bufferList) {
 	
 	fadeOut = setInterval(function() {
 		gain.gain.value *= .7;
-	},  100);
+	}, 100);
 }
 
 function download()	{
