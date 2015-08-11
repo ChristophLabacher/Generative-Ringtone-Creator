@@ -6,6 +6,8 @@ This is an experiment in **generative audio design** created by [Christoph Labac
 
 Different digits of the phone number are used to create a chord, which can be played with various instruments. The idea is that in a messaging app close friends could get a personal ringtone which would become recognizable over time – so you already know who wrote a message. The ringtones are still supposed to sound consistent, though. The different instruments could be used to symbolize different groups.
 
+> [**Try it yourself!**](http://christophlabacher.com/Generative-Ringtone-Creator) (Supports Google Chrome and Mozilla Firefox)
+
 The sounds were created by the [University of Iowa Electronic Music Studios](http://theremin.music.uiowa.edu/index.html).
 
 ## How many combinations are there?
